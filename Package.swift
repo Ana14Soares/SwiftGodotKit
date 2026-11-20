@@ -1,9 +1,12 @@
 // swift-tools-version: 5.9
 import PackageDescription
+// Zahara: libgodot recompilado SEM o CAContext/CGSMainConnectionID (APIs privadas
+// da Apple, rejeitadas pela App Store na guideline 2.5.1). So o macOS muda;
+// o iOS continua usando o binario oficial.
 let macLibgodotTarget: Target = .binaryTarget(
     name: "mac_libgodot",
-    url: "https://github.com/migueldeicaza/godot/releases/download/v4.7.3-rc-swiftgodotkit.1/libgodot-macos.xcframework.zip",
-    checksum: "dda4992c4c5abc8de7af49c3a1465e966aed74b3c0599c48544a333b9a94589e"
+    url: "https://github.com/Ana14Soares/SwiftGodotKit/releases/download/v4.7.3-rc-zahara.1/libgodot-macos.xcframework.zip",
+    checksum: "caaee99cee22080992f28462e7be4f2f99184de110ceb1f28af0b1a2ee42cc6f"
 )
 
 let iosLibgodotTarget: Target = .binaryTarget(
